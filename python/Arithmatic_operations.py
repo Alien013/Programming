@@ -1,0 +1,12 @@
+num1 = int(input("Enter first number:"))
+num2 = int(input("Enter first number:"))
+sum = num1+num2
+dif = num1-num2
+product = num1*num2
+div = num1/num2
+rem = num1 % num2
+print("Addition =", sum)
+print("difference =", dif)
+print("product =", product)
+print("division =", div)
+print("remainder =", rem)

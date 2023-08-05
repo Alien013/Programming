@@ -1,0 +1,6 @@
+print("Enter the standard deviation: ")
+SD=int(input())
+N=int(input("Enter the number of units to be withiin the range of true mean:"))
+print("N for 95% confident = ",int(1.96*1.96*SD**2/(N**2)))
+print("N for 90% confident = ",int(1.645*1.645*SD**2/(N**2)))
+print("N for 99% confident = ",int(2.58*2.58*SD**2/(N**2)))
