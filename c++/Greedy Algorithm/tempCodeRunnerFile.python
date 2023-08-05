@@ -1,0 +1,8 @@
+def Transpose(M):
+    T=list()
+    for i in range(len(M[0])):
+         t=list()
+         for j in range(len(M)):
+              t.append(M[j][i])
+         T.append(t)     
+    return(T) 
