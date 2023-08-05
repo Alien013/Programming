@@ -1,0 +1,26 @@
+Create Table Purchase_Summary(
+orderid varchar(20),
+orderdate DATE,
+userid varchar(20),
+);
+
+Create Table Purchase_details(
+itemid varchar(20) Unique Not Null,
+orderid varchar(20) Not NULL,
+Category varchar(20),
+item varchar(20),
+Payment int(8),
+);
+
+
+
+INSERT INTO `purchase_summary` (`orderid`, `orderdate`, `userid`) VALUES (('AB1234', '2013-01-01', '1234'),('AB1235', '2017-01-01', '1235'), ('AB1236', '2023-01-13', '1236'));
+INSERT INTO `purchase_details` (`itemid`, `orderid`, `category`, `item`, `Payment`) VALUES ('1234', 'AB1234', 'grocery', 'sugar', '135'), ('1111', 'AB1235', 'Kitchen', ' plate', '300');
+
+SELECT orderid,Payment FROM `purchase_details`;
+
+
+SELECT purchase_summary.userid, purchase_details.itemid FROM purchase_summary INNER JOIN purchase_details ON purchase_summary.orderid=purchase_details.orderid AND orderdate!='2013-01-12' AND orderdate='2012-12-02';
+
+
+SELECT purchase_summary.userid FROM purchase_summary INNER JOIN purchase_details ON purchase_summary.orderid=purchase_details.orderid AND orderdate='2013-01-12' AND category='books' AND category!='music';
